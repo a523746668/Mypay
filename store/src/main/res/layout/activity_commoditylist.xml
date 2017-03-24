@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_commoditylist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context="com.example.a52374.mystore.CommoditylistActivity">
+     <com.example.a52374.mystore.wight.HomeToolbar
+         android:layout_width="match_parent"
+         android:layout_height="?attr/actionBarSize"
+         android:id="@+id/Comtool"
+         app:navigationIcon="@mipmap/icon_back_32px"
+         app:title="商品列表"
+         android:background="@color/toobalback"
+         ></com.example.a52374.mystore.wight.HomeToolbar>
+
+
+
+
+  <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listtab"
+        android:layout_below="@+id/Comtool"
+        android:layout_marginTop="5dp"></android.support.design.widget.TabLayout>
+
+
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/listrecyc"
+      android:layout_below="@+id/listtab"
+      ></android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+

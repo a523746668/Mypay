@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="?attr/actionBarSize"
+     android:background="#eb4f38"
+     android:id="@+id/cartrl">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="3dp"
+          android:textColor="#000"
+          android:textSize="20sp"
+          android:text="购物车"
+          android:layout_centerInParent="true"/>
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="15sp"
+           android:id="@+id/cartbut1"
+           android:layout_alignParentRight="true"
+           android:layout_margin="3dp"
+           android:layout_centerVertical="true"
+           android:text="编辑"
+           android:background="@color/colorPrimary"
+           />
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="15sp"
+         android:id="@+id/cartbut2"
+         android:layout_alignParentRight="true"
+         android:layout_margin="3dp"
+         android:layout_centerVertical="true"
+         android:text="完成"
+         android:background="@color/colorPrimary"
+         android:visibility="gone"
+
+         />
+ </RelativeLayout>
+       <android.support.v4.widget.SwipeRefreshLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/cartrefresh"
+           android:layout_below="@id/cartrl"
+           android:layout_above="@+id/cartrl2">
+
+           <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/cartcyc"></android.support.v7.widget.RecyclerView>
+
+       </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:id="@+id/cartrl2"
+         android:background="#fff"
+         android:layout_alignParentBottom="true">
+         <CheckBox
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:text="全选"
+             android:layout_margin="5dp"
+             android:button="@drawable/selector_checkbox"
+             android:id="@+id/cartcheck"
+             />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="总计(不含税，运费):"
+             android:layout_toRightOf="@id/cartcheck"
+             android:layout_marginTop="5dp"
+             android:textSize="10sp"
+             android:layout_marginLeft="40dp"
+             android:id="@+id/carttv1"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@id/carttv1"
+             android:text="￥ 0.00"
+             android:layout_marginTop="3dp"
+             android:layout_marginLeft="3dp"
+             android:textColor="#eb4f38"
+             android:id="@+id/carttv2"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/carttv3"
+             android:layout_below="@id/carttv2"
+             android:layout_alignLeft="@id/carttv2"
+             android:text="已省:0.00"
+             android:textSize="10sp"
+             android:layout_margin="5dp"/>
+         <Button
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="立即结算"
+             android:padding="15dp"
+             android:layout_alignParentRight="true"
+             android:textSize="18sp"
+             android:background="@drawable/bg_clickable"
+
+             android:layout_toRightOf="@id/carttv3"
+             android:id="@+id/but_sum"
+
+             />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/but_delete"
+            android:background="@drawable/bg_clickable"
+
+            android:text="删除"
+           android:layout_toRightOf="@+id/cartcheck"
+            android:layout_marginLeft="60dp"
+            android:visibility="gone"/>
+
+         <Button
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="移入关注"
+             android:padding="15dp"
+             android:layout_alignParentRight="true"
+             android:textSize="18sp"
+             android:background="@drawable/bg_clickable"
+             android:layout_toRightOf="@id/but_delete"
+             android:id="@+id/but_guanzhu"
+             android:visibility="gone"/>
+
+
+ </RelativeLayout>
+
+
+</RelativeLayout>

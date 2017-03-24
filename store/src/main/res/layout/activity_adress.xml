@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_adress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.a52374.mystore.AdressActivity"
+     android:background="@color/ivory" >
+
+ <com.example.a52374.mystore.wight.HomeToolbar
+     android:layout_width="match_parent"
+     android:layout_height="?attr/actionBarSize"
+      android:id="@+id/alisttool"
+      app:title="收货地址"
+      app:navigationIcon="@mipmap/icon_back_32px"
+      app:rightButtonIcon="@mipmap/icon_add"
+     android:background="@color/toobalback"
+     ></com.example.a52374.mystore.wight.HomeToolbar>
+
+  <com.cjj.MaterialRefreshLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/alisttool"
+      android:id="@+id/alistrefresh"
+      >
+     <android.support.v7.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+        android:id="@+id/alistrecyc"
+         ></android.support.v7.widget.RecyclerView>
+
+
+  </com.cjj.MaterialRefreshLayout>
+
+
+
+</RelativeLayout>

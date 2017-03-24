@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a52374.mystore.MainActivity">
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/mainfl"
+        android:layout_above="@+id/tabhost"
+        ></FrameLayout>
+
+   <com.example.a52374.mystore.wight.FragmentTabHost
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:id="@+id/tabhost"
+        android:layout_alignParentBottom="true"
+       >
+      <FrameLayout
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:id="@android:id/tabcontent">
+
+      </FrameLayout>
+      
+   </com.example.a52374.mystore.wight.FragmentTabHost>
+
+</RelativeLayout>

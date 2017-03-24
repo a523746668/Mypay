@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <litepal>
+        <dbname value="buycar" ></dbname>
+
+       <version value="1" ></version>
+
+     <list>
+         <mapping class="com.example.a52374.mystore.bean.Commodity"></mapping>
+         <mapping class="com.example.a52374.mystore.bean.Collect"></mapping>
+         <mapping class="com.example.a52374.mystore.bean.Address"></mapping>
+     </list>
+    </litepal>

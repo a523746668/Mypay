@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:background="@color/white"
+
+    >
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+
+        android:layout_marginLeft="10dp"/>
+
+  <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关注的航班"
+        android:id="@+id/textView"
+        android:textSize="25sp"
+       android:layout_marginTop="10dp"
+      android:layout_marginLeft="20dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:gravity="center" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkbox1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+
+         android:layout_centerVertical="true"
+            android:button="@drawable/viewgroupcheck"
+        />
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+         android:background="@color/ivory"
+         android:layout_below="@id/imageView"
+          android:layout_marginTop="5dp"
+         android:layout_toRightOf="@id/imageView"/>
+</RelativeLayout>

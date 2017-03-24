@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.a52374.mystore.LoginActivity">
+
+     <com.example.a52374.mystore.wight.HomeToolbar
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:minHeight="?attr/actionBarSize"
+         android:background="@color/toobalback"
+         app:title="登录"
+         app:navigationIcon="@mipmap/icon_back_32px"
+         android:id="@+id/logintool"
+         ></com.example.a52374.mystore.wight.HomeToolbar>
+
+
+     <com.example.a52374.mystore.wight.ClearEditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:minHeight="?attr/actionBarSize"
+         android:gravity="center"
+         android:drawableLeft="@drawable/icon_telphone_32"
+         android:hint="请输入手机号码"
+         android:layout_below="@id/logintool"
+         android:layout_marginTop="60dp"
+         android:inputType="phone"
+         style="@style/editText_base"
+         android:id="@+id/login_user"
+
+         />
+
+
+
+
+    <com.example.a52374.mystore.wight.ClearEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_password"
+        style="@style/editText_base"
+        android:layout_below="@id/login_user"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+
+        />
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="登录"
+       style="@style/bigRedButton"
+       android:id="@+id/login_btn"
+       android:layout_marginTop="30dp"
+       android:layout_below="@id/login_password"/>
+
+    <Button
+        android:text="注册"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+        android:id="@+id/button"
+        style="@style/smallbutton"
+
+        />
+
+    <Button
+        style="@style/smallbutton"
+        android:text="忘记密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button2" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击‘下一步’ 按钮，表示你同意《菜鸟窝用户协议》"
+        android:textColor="@color/border_color"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="@dimen/largePadding"
+        android:layout_below="@id/button2"
+
+        />
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="#fff">
+
+   <CheckBox
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/cartitemcb"
+       android:layout_centerVertical="true"/>
+   <ImageView
+       android:layout_width="80dp"
+       android:layout_height="100dp"
+       android:id="@+id/cartitemiv"
+       android:layout_toRightOf="@+id/cartitemcb"
+
+       android:layout_marginLeft="15dp"/>
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/cartitemtv"
+         android:layout_toRightOf="@id/cartitemiv"
+         android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cartitemtv2"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/cartitemtv"/>
+    <com.example.a52374.mystore.wight.Myaddsubview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/cartitemtv"
+        android:layout_below="@id/cartitemtv2"
+        android:id="@+id/addsub"
+        ></com.example.a52374.mystore.wight.Myaddsubview>
+</RelativeLayout>

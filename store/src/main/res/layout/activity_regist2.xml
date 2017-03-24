@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_regist2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.a52374.mystore.Regist2Activity">
+
+   <com.example.a52374.mystore.wight.HomeToolbar
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/mtool"
+       android:minHeight="?attr/actionBarSize"
+
+       android:background="@color/toobalback"
+       app:title="(2/2)注册步骤"
+       app:navigationIcon="@mipmap/icon_back_32px"
+       app:rightButtonText="完成"
+       ></com.example.a52374.mystore.wight.HomeToolbar>
+
+
+    <TextView
+        android:id="@+id/txtTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/border_color"
+        android:textSize="12sp"
+        android:layout_marginTop="40dp"
+        android:padding="@dimen/largePadding"
+       android:layout_below="@id/mtool"
+        />
+
+     <com.example.a52374.mystore.wight.ClearEditText
+          android:layout_width="200dp"
+         android:layout_height="wrap_content"
+         style="@style/editText_base"
+         android:hint="请输入验证码"
+         android:inputType="number"
+         android:layout_below="@id/txtTip"
+         android:layout_marginTop="30dp"
+         android:id="@+id/red"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="再次发送"
+        android:enabled="false"
+        android:layout_alignTop="@id/red"
+        android:layout_toRightOf="@id/red"
+        android:id="@+id/rbut"/>
+</RelativeLayout>

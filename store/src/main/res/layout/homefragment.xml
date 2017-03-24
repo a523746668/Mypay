@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#eb4f38"
+        android:id="@+id/homerl"
+        android:padding="2dp"
+        >
+    <EditText
+        android:id="@+id/toolbar_searchview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+
+        android:gravity="center"
+        android:drawableLeft="@mipmap/icon_search"
+        style="@style/search_view"
+        android:hint="请输入搜索内容"
+
+        />
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/homevp"
+        android:layout_below="@id/homerl">
+
+
+    </android.support.v4.view.ViewPager>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homerg"
+        android:layout_alignBottom="@id/homevp"
+        android:layout_marginBottom="5dp"
+         android:layout_centerHorizontal="true"
+         android:orientation="horizontal"
+        >
+
+    </RadioGroup>
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/homerecyclerview"
+      android:layout_below="@id/homevp"
+      android:layout_marginTop="5dp">
+
+  </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="#eb4f38"
+       android:id="@+id/hotrl">
+      <EditText
+          android:id="@+id/toolbar_searchview"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+
+          android:gravity="center"
+          android:drawableLeft="@mipmap/icon_search"
+          style="@style/search_view"
+          android:hint="请输入搜索内容"
+
+          />
+   </RelativeLayout>
+   <com.cjj.MaterialRefreshLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:wave_color="#90ffffff"
+       android:id="@+id/hotrefresh"
+       android:layout_below="@id/hotrl">
+
+      <android.support.v7.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/hotrecyc">
+
+      </android.support.v7.widget.RecyclerView>
+
+   </com.cjj.MaterialRefreshLayout>
+
+</RelativeLayout>

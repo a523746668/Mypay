@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_write_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_color"
+    tools:context="com.example.a52374.mystore.WriteOrderActivity">
+
+    <com.example.a52374.mystore.wight.HomeToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/wotool"
+        app:navigationIcon="@mipmap/icon_back_32px"
+        app:title="填写订单"
+        android:background="@color/toobalback"
+        ></com.example.a52374.mystore.wight.HomeToolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          android:layout_below="@id/wotool"
+         android:id="@+id/worl"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wotv"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wotv2"
+            android:layout_below="@id/wotv"
+            android:textColor="@color/gray"
+            />
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+            android:src="@drawable/icon_right_64"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/worl"
+        android:layout_marginTop="10dp"
+         android:padding="5dp"
+        android:id="@+id/worl2"
+        >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="订单列表"
+           android:id="@+id/wotv3"/>
+
+
+         <ImageView
+             android:layout_width="70dp"
+             android:layout_height="70dp"
+             android:id="@+id/woiv1"
+             android:layout_below="@id/wotv3"
+             android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/woiv2"
+            android:layout_below="@id/wotv3"
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@id/woiv1"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/woiv3"
+            android:layout_below="@id/wotv3"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_right_64"
+            android:scaleType="fitXY"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wotv4"
+             android:layout_alignTop="@id/woiv2"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@id/woiv3"
+            />
+
+    </RelativeLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/white"
+         android:layout_below="@id/worl2"
+         android:orientation="vertical"
+         android:layout_marginTop="15dp"
+         android:padding="5dp">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="支付方式"
+             android:textSize="18sp"
+             />
+        <com.example.a52374.mystore.wight.Viewgroupdemo1
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:content="支付宝"
+            app:bitsouce="@drawable/icon_alipay_72"
+            app:istrue="true"
+            android:id="@+id/wovp1"
+            ></com.example.a52374.mystore.wight.Viewgroupdemo1>
+         <com.example.a52374.mystore.wight.Viewgroupdemo1
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:content="微信"
+             app:bitsouce="@drawable/icon_wechat_72"
+             app:istrue="false"
+             android:id="@+id/wovp2"
+             ></com.example.a52374.mystore.wight.Viewgroupdemo1>
+
+
+
+     </LinearLayout>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:background="#90000000"
+       android:padding="15dp"
+       >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="应付总额:"
+          android:id="@+id/wotv5"
+          android:layout_centerVertical="true"
+          android:textSize="20sp"
+          />
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/wotv6"
+         android:layout_toRightOf="@id/wotv5"
+         android:text="2333"
+         android:textColor="@color/toobalback"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="5dp"
+         android:textSize="20sp"
+         />
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          style="@style/smallbutton"
+          android:text="提交订单"
+          android:layout_alignParentRight="true"
+           android:id="@+id/wobutput"
+          />
+
+
+
+   </RelativeLayout>
+
+</RelativeLayout>
